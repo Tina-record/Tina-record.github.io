@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    header {
+      min-width: 600px;
+      background-color: #000;
+    }
+
+    header>p {
+      width: 600px;
+      margin: 0 auto;
+      color: #fff;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* div, p 标签实现4行3列布局*/
+    main div:nth-child(2)>p {
+      width: 180px;
+      height: 40px;
+      box-sizing: border-box;
+      margin: 0;
+      border: 3px solid #000;
+      background-color: pink;
+    }
+
+    main div:nth-child(2)>p:hover {
+      background-color: #f00;
+    }
+
+    /*垂直间隙15px，每行文字居中*/
+    main div:nth-child(2)>p {
+      margin-bottom: 15px;
+      line-height: 2;
+      text-align: center;
+    }
+
+    /*水平间隙30px*/
+    main div:nth-child(2)>p:nth-child(n+5) {
+      margin-left: 210px;
+    }
+
+    main div:nth-child(2)>p:nth-child(n+9) {
+      margin-left: 420px;
+    }
+
+    /*每列水平对齐*/
+    main div:nth-child(2)>p:nth-child(4n):not(:last-child) {
+      margin-bottom: -205px;
+    }
+
+    /* ul, li 标签实现4行3列布局*/
+    main ul {
+      padding: 0;
+      list-style: none;
+      font-size: 0;
+    }
+
+    main ul>li {
+      font-size: 16px;
+    }
+
+    main ul:nth-child(3)>li {
+      display: inline-block;
+      width: 180px;
+      height: 40px;
+      box-sizing: border-box;
+      border: 3px dashed #66ccff;
+      background-color: #CCFFFF;
+      line-height: 2;
+      text-align: center;
+    }
+
+
+    /* 鼠标停留显示天空蓝色 */
+    main ul:nth-child(3)>li:hover {
+      background-color: #66CCFF;
+    }
+
+    /*垂直间隙15px*/
+    main ul:nth-child(3)>li:nth-child(n) {
+      margin-bottom: 15px;
+    }
+
+    /*水平间隙30px*/
+    main ul:nth-child(3)>li:nth-child(3n+1),
+    ul:nth-child(3)>li:nth-child(3n+2) {
+      margin-right: 30px;
+    }
+
+    main ul:nth-child(4)>li:not(:last-child) {
+      border-bottom: 1px dotted;
+    }
+
+    footer {
+      min-width: 600px;
+      margin: 20px auto;
+      background-color: violet;
+    }
+
+    footer p {
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <p>hello world 请调整浏览器窗口大小查看效果</p>
+  </header>
+  <main>
+    <p>页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体
+      宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+      页面主体 宽度600px </p>
+
+    <div>
+      <p>宽180高40(包含边框)</p>
+      <p>水平间隙30px</p>
+      <p>垂直间隙15px</p>
+      <p>边框宽度3px</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+      <p>产品</p>
+    </div>
+
+    <ul>
+      <li>宽180高40(包含边框)</li>
+      <li>产品01</li>
+      <li>产品02</li>
+      <li>水平间隙30px</li>
+      <li>产品03</li>
+      <li>产品04</li>
+      <li>垂直间隙15px</li>
+      <li>产品05</li>
+      <li>产品06</li>
+      <li>边框宽度3px</li>
+      <li>产品07</li>
+      <li>产品08</li>
+    </ul>
+
+    <ul>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+      <li>link</li>
+    </ul>
+  </main>
+  <footer>
+    <p>&#169;版权所有</p>
+    <p>本页所有布局均使用快元素/行内块元素</p>
+  </footer>
+
+</body>
+
+</html>

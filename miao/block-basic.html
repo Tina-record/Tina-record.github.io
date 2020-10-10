@@ -2,80 +2,103 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <style>
-    body {
-      box-sizing: border-box;
-    }
-
-    .box1 {
+    section {
       min-width: 600px;
       background-color: red;
     }
 
-    .box1 p {
+    section p {
       width: 600px;
       margin: 20px auto;
       background-color: red;
     }
 
-    .main {
-      width: 600px;
+    main {
+      box-sizing: border-box;
+      max-width: 600px;
+      margin: 20px auto;
+      padding: 0 10px;
       border: 2px solid #000;
-      margin: 10px auto;
     }
 
-    .main p {
+    main p:nth-child(3) {
       height: 65px;
-      margin: 20px 10px;
       overflow-x: hidden;
       overflow-y: scroll;
     }
 
-    .main .interval {
-      border: 20px solid violet;
-      margin: 0 10px;
+    main .interval {
+      height: 50px;
+      background-color: violet;
     }
 
-    .main .interval:hover {
-      border: 20px solid violet;
-      margin: auto;
+    main .interval:hover {
+      margin: 0 -10px;
+    }
+
+
+    .triangle,
+    .rhombus-upper,
+    .rhombus-under {
+      margin: 0 auto;
     }
 
     .triangle {
       width: 0;
       height: 0;
       border: 50px solid;
+      border-width: 0 50px 50px;
       border-color: transparent transparent orange;
-      margin: 20px auto;
+    }
+
+    .rhombus-upper,
+    .rhombus-under {
+      width: 0;
+      height: 0;
+      border: 50px solid;
+      border-color: transparent transparent orange;
+    }
+
+    .rhombus-upper {
+      border-color: transparent transparent orange transparent;
+    }
+
+    .rhombus-under {
+      border-color: orange transparent transparent transparent;
     }
   </style>
 </head>
 
 <body>
   <section>
-    <div class="box1">
-      <p>aaaa</p>
-    </div>
-
-    <div class="main">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sapiente voluptas officiis, praesentium, nemo
-        iure cumque nihil, facere hic asperiores dicta commodi magni, voluptates eaque esse atque nesciunt!
-        Cupiditate,
-        modi.</p>
-      <div class="interval"></div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi accusantium deleniti consequuntur, enim
-        nulla voluptatum qui ducimus esse rem eius eligendi consequatur sint. Sunt ut, est iusto neque numquam. Lorem
-        ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam animi perspiciatis eos, molestias provident,
-        quae
-        ullam! Obcaecati suscipit optio labore iusto veniam facere, amet officiis, eveniet voluptatibus molestiae,
-        dignissimos dolor!</p>
-    </div>
+    <p>aaaa</p>
+  </section>
+  <main>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae sapiente
+      voluptas officiis, praesentium, nemo iure cumque nihil, facere hic
+      asperiores dicta commodi magni, voluptates eaque esse atque nesciunt!
+      Cupiditate, modi.
+    </p>
+    <div class="interval"></div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos modi
+      accusantium deleniti consequuntur, enim nulla voluptatum qui ducimus
+      esse rem eius eligendi consequatur sint. Sunt ut, est iusto neque
+      numquam. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      Laboriosam animi perspiciatis eos, molestias provident, quae ullam!
+      Obcaecati suscipit optio labore iusto veniam facere, amet officiis,
+      eveniet voluptatibus molestiae, dignissimos dolor!
+    </p>
 
     <div class="triangle"></div>
-  </section>
+    <div class="rhombus-upper"></div>
+    <div class="rhombus-under"></div>
+  </main>
 
 </body>
 
