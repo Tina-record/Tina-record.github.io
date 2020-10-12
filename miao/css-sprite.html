@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS sprite</title>
+  <style>
+    .icon {
+      width: 100px;
+      height: 100px;
+      border: 1px dashed red;
+      margin-top: 10px;
+      background-image: url("./images/eskimo-boy-game-sprites.jpg");
+    }
+
+    .icon-run {
+      background-position: -485px -40px;
+    }
+
+    .icon-walk {
+      background-position: -220px -160px;
+    }
+
+    .icon-jump {
+      background-position: -220px -280px;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="icon icon-run"></div>
+    <div class="icon icon-walk"></div>
+    <div class="icon icon-jump"></div>
+  </section>
+
+</body>
+
+</html>
