@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /* 方法一： */
+    .img_fisrt {
+      width: 300px;
+      height: 300px;
+      line-height: 300px;
+      text-align: center;
+      border: 1px solid red;
+      margin: 0 auto;
+    }
+
+    .img_fisrt img {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .img-size {
+      width: 100px;
+      height: 100%;
+    }
+
+    /* 方法二： */
+    .background1,
+    .background2,
+    .background3 {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      border: 2px dotted #7a0b62;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .background1 {
+      background-image: url("./images/风景图标2.png");
+    }
+
+    .background2 {
+      background-image: url("./images/风景图1.jpg");
+    }
+
+    .background3 {
+      background-image: url("./images/风景图2.jpg");
+      background-size: contain;
+    }
+
+    /* 方法三： */
+    .center,
+    .img_center {
+      width: 300px;
+      height: 300px;
+    }
+
+    .center {
+      border: 1px dashed red;
+      margin: 0 auto;
+    }
+
+    .center .img_center {
+      object-fit: contain;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="img_fisrt">
+    <img src="./images/风景图标2.png" alt="scenery1">
+  </div>
+  <hr>
+  <div class="img_fisrt">
+    <img src="./images/风景图1.jpg" alt="scenery2">
+  </div>
+  <hr>
+  <div class="img_fisrt">
+    <img src="./images/风景图2.jpg" alt="scenery3" class="img-size">
+  </div>
+
+  <hr>
+  <hr>
+
+  <div class="background1"></div>
+  <hr>
+  <div class="background2"></div>
+  <hr>
+  <div class="background3"></div>
+
+  <hr>
+  <hr>
+
+  <div class="center">
+    <img src="./images/风景图标2.png" alt="scenery1" class="img_center">
+  </div>
+  <hr>
+  <div class="center">
+    <img src="./images/风景图1.jpg" alt="scenery2" class="img_center">
+  </div>
+  <hr>
+  <div class="center">
+    <img src="./images/风景图2.jpg" alt="scenery3" class="img_center img-size">
+  </div>
+
+
+</body>
+
+</html>

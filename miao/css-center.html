@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <style>
+    /* 情况一：父和子定高宽 */
+    .a {
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+      border: 1px dashed red;
+    }
+
+    /* 正常流 */
+    .a11 {
+      width: 100px;
+      height: 100px;
+      margin: 50px auto;
+      border: 1px dashed red;
+    }
+
+    /* 行内元素 */
+    .a2 {
+      text-align: center;
+      line-height: 200px;
+    }
+
+    .a2 .a21 {
+      margin: 0 auto;
+      border: 1px solid red;
+      display: inline;
+    }
+
+    /* 定位:父无定位，子元素 relative */
+    .a31 {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      top: 50px;
+      left: 50px;
+      border: 1px dashed red;
+    }
+
+    /* 定位:父元素relative，子元素absolute */
+    .a4 {
+      position: relative;
+    }
+
+    .a41 {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+      border: 1px solid red;
+    }
+
+    /* block(块级)元素 */
+    .a51 {
+      width: 100px;
+      height: 100px;
+      border: 1px dashed red;
+      display: block;
+      margin: 50px auto;
+    }
+
+    /* inline-block元素 */
+    .a6 {
+      line-height: 200px;
+      text-align: center;
+    }
+
+    .a61 {
+      width: 100px;
+      height: 100px;
+      border: 1px solid red;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* 表格布局 */
+    .a7 {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .a71 {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      border: 1px dashed red;
+    }
+
+    /* 定位+2D */
+    .a8 {
+      position: relative;
+    }
+
+    .a81 {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid red;
+    }
+
+    /* flex布局*/
+    .a9 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .a91 {
+      width: 100px;
+      height: 100px;
+      border: 1px dashed red;
+    }
+
+    /* 情况二：父定高不定宽，子定高宽 */
+    .b {
+      height: 200px;
+      /* margin: 10px; */
+      border: 1px solid;
+    }
+
+    /* 正常流*/
+    .b11 {
+      width: 100px;
+      height: 100px;
+      margin: 50px auto;
+      border: 2px solid;
+    }
+
+    /* 行内元素 */
+    .b2 {
+      text-align: center;
+      line-height: 200px;
+    }
+
+    .b2 .b21 {
+      margin: 0 auto;
+      border: 2px dashed;
+      display: inline;
+    }
+
+    /* 定位:父元素无定位，子元素relative */
+    .b31 {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      top: 50px;
+      left: 50%;
+      margin-left: -50px;
+      border: 2px solid;
+    }
+
+    /* 定位:父元素relative，子元素absolute */
+    .b4 {
+      position: relative;
+    }
+
+    .b41 {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      margin-left: -50px;
+      border: 2px dashed;
+    }
+
+    /* block(块级)元素 */
+    .b51 {
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin: 50px auto;
+      border: 2px solid;
+    }
+
+    /* inline-block元素 */
+    .b6 {
+      line-height: 200px;
+      text-align: center;
+    }
+
+    .b61 {
+      width: 100px;
+      height: 100px;
+      border: 2px dashed;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /*表格布局*/
+    .b7 {
+      width: 100px;
+      height: 100px;
+      border: 2px solid;
+
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <p>父元素和子元素都定高定宽</p>
+  <div class="a a1">
+    <div class="a11"></div>
+  </div>
+  <hr />
+
+  <div class="a a2">
+    <div class="a21">2345332</div>
+  </div>
+  <hr />
+
+  <div class="a a3">
+    <div class="a31"></div>
+  </div>
+  <hr />
+
+  <div class="a a4">
+    <div class="a41"></div>
+  </div>
+  <hr />
+
+  <div class="a a5">
+    <div class="a51"></div>
+  </div>
+  <hr />
+
+  <div class="a a6">
+    <div class="a61"></div>
+  </div>
+  <hr />
+
+  <div class="a a7">
+    <div class="a71">
+    </div>
+  </div>
+  <hr />
+
+  <div class="a a8">
+    <div class="a81"></div>
+  </div>
+  <hr />
+
+  <div class="a a9">
+    <div class="a91"></div>
+  </div>
+  <hr />
+
+  <p>父元素不定宽而定高，子元素定宽高</p>
+  <div class="b b1">
+    <div class="b11"></div>
+  </div>
+  <hr />
+
+  <div class="b b2">
+    <div class="b21">2345332</div>
+  </div>
+  <hr />
+
+  <div class="b b3">
+    <div class="b31"></div>
+  </div>
+  <hr />
+
+  <div class="b b4">
+    <div class="b41"></div>
+  </div>
+  <hr />
+
+  <div class="b b5">
+    <div class="b51"></div>
+  </div>
+  <hr />
+
+  <div class="b b6">
+    <div class="b61"></div>
+  </div>
+
+  <div class="b">
+    <div class="b7">
+      <p>Hello,world!</p>
+    </div>
+  </div>
+  <hr />
+</body>
+
+</html>
