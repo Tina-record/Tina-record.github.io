@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>模仿qq邮箱,relative + absolute定位布局</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    html,
+    body,
+    .wrapper {
+      height: 100%;
+      width: 100%;
+    }
+
+    .wrapper {
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+
+    header {
+      width: 100%;
+      height: 65px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-bottom: 2px solid red;
+    }
+
+    aside {
+      position: absolute;
+      left: 0;
+      top: 67px;
+      width: 190px;
+      height: calc(100% - 67px);
+      border-right: 2px solid blue;
+    }
+
+    main {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: calc(100% - 192px);
+      height: calc(100% - 67px);
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>页面头部</header>
+    <aside>左侧栏</aside>
+    <main>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam enim animi perspiciatis ipsa. Expedita maiores
+      eius enim, sint, corporis aliquam at repudiandae magni minima quibusdam repellendus? Odit vero exercitationem,
+      commodi sapiente optio similique dolore distinctio a dolorum aliquid quaerat harum dolor. Ullam doloremque,
+      repellendus sequi perspiciatis reiciendis ab quo beatae. Dolorem molestiae at quibusdam perspiciatis quaerat odio
+      magnam architecto magni ad nisi amet, dolorum, natus nostrum obcaecati hic explicabo quae recusandae voluptatem
+      velit beatae sunt deleniti? Natus, eaque! Praesentium mollitia veniam accusamus, vero amet quidem repudiandae
+      dolor
+      sit, consequuntur ea aliquam obcaecati explicabo? Eligendi ducimus perspiciatis debitis magni nemo a eveniet? Vero
+      consequuntur odio mollitia voluptate porro pariatur a laboriosam, amet incidunt molestias animi totam neque
+      deleniti
+      cum qui dicta officia iste veniam sed debitis saepe suscipit libero aspernatur quos! Nam enim voluptas ipsam
+      tempora
+      amet deserunt id fugit explicabo iste, quia tenetur, porro laboriosam vitae libero? Molestiae, nulla sint laborum
+      recusandae nemo amet consequuntur molestias aliquam in rem ab aut at placeat id, ipsam quas illo odio? Neque unde
+      iure, nihil consequuntur maiores corporis officiis, fugit omnis repellendus illum, nam eligendi. Quam, explicabo
+      tempore. Quam accusamus ut ex natus non aliquam a maxime facilis asperiores ea minus, exercitationem ducimus porro
+      cum reiciendis labore officiis tempora. Suscipit, expedita dolores vero animi repellendus laborum voluptas
+      aliquam,
+      obcaecati omnis architecto optio excepturi quis pariatur quo ea nemo eum saepe dolorum asperiores quasi inventore.
+      Libero ut ab accusamus tempora. Inventore ratione sit voluptate eveniet culpa nisi itaque, quis accusantium quae
+      cum
+      nam laboriosam, provident fuga repudiandae similique officiis assumenda consequatur voluptatibus quasi soluta
+      deserunt, modi vero. Reiciendis veritatis ipsa nisi officiis? Facere numquam repellat voluptas eos illum
+      consequuntur perferendis non aspernatur dolor magnam, accusantium esse ab sapiente libero laudantium, tenetur
+      iusto
+      voluptates! Quaerat, sapiente optio. Fugiat facilis obcaecati aperiam quidem eaque ducimus assumenda, nulla totam
+      labore voluptatem amet tempora earum repudiandae, reiciendis possimus voluptates. Ut praesentium expedita
+      laudantium
+      beatae, optio esse vitae pariatur nulla dolore debitis suscipit iure commodi neque quae aliquam rerum eaque.
+      Quibusdam, quo. Molestias minima consequatur ducimus, fugit atque nesciunt eum omnis saepe ut dignissimos! Et
+      incidunt voluptas dolore quisquam perferendis cum reprehenderit, qui aperiam. Itaque dolorum mollitia quia tempora
+      odit dolorem ad laudantium voluptatem numquam, omnis impedit repudiandae error tenetur delectus porro repellendus
+      magnam sint a aliquid explicabo rem eaque id odio. Maiores natus quo quas? Recusandae ipsum est reprehenderit
+      deleniti mollitia amet. Distinctio officiis itaque mollitia exercitationem iure, eveniet dolorem asperiores iste
+    </main>
+  </div>
+</body>
+
+</html>
