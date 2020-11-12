@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>noi 题目</title>
+</head>
+
+<body>
+
+</body>
+
+<script type="norun" id="ch0103/01">
+  let a = Number(prompt());
+  let b = Number(prompt());
+
+  let result = a + b;
+  console.log(result);
+ 
+</script>
+
+<script type="norun" id="ch0103/02">
+  let a = Number(prompt("请输入数字，a："))
+  let b = Number(prompt("请输入数字，b："))
+  let c = Number(prompt("请输入数字，c："))
+
+  console.log((a + b) * c)
+</script>
+
+<script type="norun" id="ch0103/03">
+  console.log((Number(prompt()) + Number(prompt())) / Number(prompt()))
+</script>
+
+<script type="norun" id="ch0103/04">
+  let num1 = Number(prompt())
+  let num2 = Number(prompt())
+  
+  let quotient = num1 / num2
+  let reminder = num1 % num2
+  console.log(quotient,reminder)
+</script>
+
+<script type="norun" id="ch0103/05">
+  let a = Number(prompt())
+  let b = Number(prompt())
+
+  let c = (a / b).toFixed(9)
+  console.log(c)
+</script>
+
+<script type="norun" id="ch0103/06">
+  let a = Number(prompt("请输入死亡人数："))
+  let b = Number(prompt("请输入确诊人数："))
+
+  let percentage = (a / b) * 100
+  let result = percentage.toFixed(3)
+  console.log("死亡率：", result + "%")
+</script>
+
+<script type="norun" id="ch0103/07">
+  let x = Number(prompt("请输入 x："))
+  let a = Number(prompt("请输入 a："))
+  let b = Number(prompt("请输入 b："))
+  let c = Number(prompt("请输入 c："))
+  let d = Number(prompt("请输入 d："))
+
+  let e = a * x * x * x
+  let f = b * x * x
+  let g = c * x
+  let h = e + f + g + d
+
+  console.log(h.toFixed(7));
+</script>
+
+<script type="norun" id="ch0103/08">
+  // C表示摄氏温度(Celsius)，F表示华氏温度（Fahrenheit）
+
+  let F = Number(prompt("请输入华氏温度："))
+  let C = 5 * (F - 32) / 9
+  console.log(C.toFixed(5));
+</script>
+
+
+<script type="norun" id="ch0103/09">
+  let radius = Number(prompt("请输入半径数字："))
+  let pi = Math.PI
+
+  let diam = (2 * radius).toFixed(4)
+  let perimeter = (pi * radius).toFixed(4)
+  let area = (pi * radius * radius).toFixed(4)
+
+  console.log("圆的直径:" + diam, "圆的周长:" + perimeter, "圆的面积:" + area)
+</script>
+
+<script type="norun" id="ch0103/10">
+  let r1 = Number(prompt())
+  let r2 = Number(prompt())
+
+  let a = 1 / r1
+  let b = 1 / r2
+  let R = 1 / (a + b)
+  console.log(R.toFixed(2))
+</script>
+
+
+<script type="norun" id="ch0103/11">
+  let a = Number(prompt())
+  let b = Number(prompt())
+
+  var c = a % b
+  console.log(c)
+</script>
+
+
+<script type="norun" id="ch0103/12">
+  let radius = Number(prompt("请输入半径(r)的数字:"))
+  let pi = Math.PI.toFixed(2)
+  console.log(pi)
+
+  let v = 4 / 3 * pi * radius * radius * radius
+  console.log("球的体积：", v.toFixed(2))
+</script>
+
+
+<script type="norun" id="ch0103/13">
+  let n = Number(prompt())
+
+  let right1 = n % 10
+  let right2 = (n - right1) / 10 % 10
+  let right3 = (n - right1 - right2 * 10) / 100 % 10
+
+  let r = "" + right1 + right2 + right3
+
+  console.log(r)
+</script>
+
+<script type="norun" id="ch0103/14">
+  let h = Number(prompt())
+  let r = Number(prompt())
+
+  let v = h * Math.PI * r * r
+  let n = 20 * 1000 / v
+  console.log(Math.ceil(n))
+</script>
+
+<script type="norun" id="ch0103/15">
+  let n = Number(prompt())
+  let x = Number(prompt())
+  let y = Number(prompt())
+
+  let r = n - Math.ceil(y / x)
+  console.log(r)
+</script>
+
+<script type="norun" id="ch0103/16">
+  let x1 = Number(prompt())
+  let y1 = Number(prompt())
+  let x2 = Number(prompt())
+  let y2 = Number(prompt())
+
+  let dx = x1 - x2
+  let dy = y1 - y2
+
+  let lenght = Math.sqrt(dx * dx + dy * dy)
+  console.log(r)
+</script>
+
+<script type="norun" id="ch0103/17">
+  let x1 = Number(prompt())
+  let y1 = Number(prompt())
+  let x2 = Number(prompt())
+  let y2 = Number(prompt())
+  let x3 = Number(prompt())
+  let y3 = Number(prompt())
+
+  // d 指differential 微分（的），简称为diff
+  let dx12 = x1 - x2
+  let dy12 = y1 - y2
+  let dx13 = x1 - x3
+  let dy13 = y1 - y3
+  let dx32 = x3 - x2
+  let dy32 = y3 - y2
+
+  let a = Math.sqrt(dx12 * dx12 + dy12 * dy12)
+  let b = Math.sqrt(dx32 * dx32 + dy32 * dy32)
+  let c = Math.sqrt(dx13 * dx13 + dy13 * dy13)
+
+  let p = (a + b + c) / 2
+
+  let s = Math.sqrt(p * (p - a) * (p - b) * (p - c))
+  console.log(s)
+</script>
+
+<script type="norun" id="ch0103/18">
+  let a1 = Number(prompt())
+  let a2 = Number(prompt())
+  let n = Number(prompt())
+
+  let r = a1 + (a2 - a1) * (n - 1)
+  console.log(r)
+</script>
+
+
+<script type="norun" id="ch0103/19">
+  let a = Number(prompt())
+  let b = Number(prompt())
+
+  console.log(a * b)
+</script>
+
+<script type="norun" id="ch0103/20">
+  let a = Number(prompt())
+  let b = Number(prompt())
+
+  let result = Math.pow(a, b)
+  console.log(result)
+</script>
+
+
+
+<script type="norun" id="ch0104/01">
+  let a = Number(prompt())
+  let cl = console.log
+
+  if (a > 0) {
+    cl("positive")
+  } else if (a < 0) {
+    cl("negative")
+  } else {
+    cl("zero")
+  }
+</script>
+
+<script type="norun" id="ch0104/02">
+  let a = Number(prompt())
+  let cl = console.log
+
+  if (a >= 0) {
+    cl(a);
+  } else if (a < 0) {
+    cl(-a);
+  }
+</script>
+
+<script type="norun" id="ch0104/03">
+  let a = Number(prompt())
+  let cl = console.log
+
+  if (a % 2 == 0) {
+    cl("even");
+  } else if (a % 2 == 1) {
+    cl("odd");
+  }
+</script>
+
+<script type="norun" id="ch0104/04">
+  let char = prompt()
+  let cl = console.log
+
+  if (char == 'SOH' || char == '!' || char == 'A' || char == 'a' || char == 'ETX' || char == '#' || char == 'C' ||
+    char == 'c' || char == 'ENQ' || char == '%' || char == 'E' || char == 'e' || char == 'BEL' || char == ',' || char ==
+    'G' || char == 'g' || char == 'HT' || char == ')' || char == 'I' || char == 'i' || char == 'VT' || char == '+' ||
+    char == 'K' || char == 'k' || char == 'CR' || char == '-' || char == 'M' || char == 'm' || char == 'SI' || char ==
+    '/' || char == 'O' || char == 'o' || char == 'DC3' || char == '3' || char == 'S' || char == 's' || char == 'DCI' ||
+    char == '1' || char == 'Q' || char == 'q' || char == 'NAK' || char == '5' || char == 'U' || char == 'u' || char ==
+    'TB' || char == '7' || char == 'W' || char == 'w' || char == 'EM' || char == '9' || char == '[' || char == '{' ||
+    char == 'GS' || char == '=' || char == ']' || char == '}' || char == 'US' || char == '?' || char == '_' || DEchar ==
+    'L' || char == '') {
+    cl("YES")
+  } else {
+    cl("NO")
+  }
+</script>
+
+<script type="norun" id="ch0104/05">
+  let a = Number(prompt())
+  let b = Number(prompt())
+  let cl = console.log;
+
+  if (a > b) {
+    cl(">")
+  } else if (a == b) {
+    cl("=")
+  } else {
+    cl("<")
+  }
+</script>
+
+<script type="norun" id="ch0104/06">
+  let a = Number(prompt())
+  let cl = console.log;
+
+  if (10 <= a && a < 100) {
+    cl("1")
+  } else {
+    cl("0")
+  }
+</script>
+
+<script type="norun" id="ch0104/07">
+  let a = Number(prompt())
+  let b = Number(prompt())
+  let cl = console.log;
+
+  if (a >= 10 || b >= 20) {
+    cl("1");
+  } else {
+    cl("0");
+  }
+</script>
+
+<script type="norun" id="ch0104/08">
+  let a = Number(prompt())
+  let cl = console.log;
+
+  if (a % 3 == 0 && a % 5 == 0) {
+    cl("YES")
+  } else {
+    cl("NO")
+  }
+</script>
+
+<script type="norun" id="ch0104/09">
+
+  let n = Number(prompt());
+  if (n % 3 == 0) {
+    console.log(3)
+  }
+  if (n % 5 == 0) {
+    console.log(5)
+  }
+
+  if (n % 7 == 0) {
+    console.log(7)
+  }
+
+  if (n % 3 != 0 && n % 5 != 0 && n % 7 != 0) {
+    console.log("n")
+  }
+</script>
+
+<script type="norun" id="ch0104/10">
+  let a = Number(prompt())
+  let b = Number(prompt())
+  let cl = console.log;
+
+  if (a <= 60 || b <= 60) {
+    cl("1");
+  } else {
+    cl("0");
+  }
+</script>
+
+<script type="norun" id="ch0104/11">
+  let days = Number(prompt("用数字1到7表示从星期一到星期日:"))
+
+  if (days == 1 || days == 3 || days == 5) {
+    console.log("NO")
+  } else {
+    console.log("YES")
+  }
+</script>
+
+<script type="norun" id="ch0104/12">
+  // m 指办事地距离出发地的总公里，单位：米(m)。
+  let m = Number(prompt(""))
+
+  let walk = m / 1.2
+  let bike = m / 3 + 23 + 27
+
+  if (walk < bike) {
+    console.log("Walk")
+  } else if (walk > bike) {
+    console.log("Bike")
+  } else {
+    console.log("All")
+  }
+</script>
+
+<script type="norun" id="ch0104/13">
+  let n = Number(prompt(""))
+
+  if (0 <= n && n < 5) {
+    let y1 = -n + 2.5;
+    console.log(y1.toFixed(3));
+  }
+  if (5 <= n && n < 10) {
+    let y2 = 2 - 1.5 * (n - 3) * (n - 3);
+    console.log(y2.toFixed(3));
+  }
+  if (10 <= n && n < 20) {
+    let y3 = n / 2 - 1.5
+    console.log(y3.toFixed(3));
+  }
+</script>
+
+<script type="norun" id="ch0104/14">
+  let weight = Number(prompt())
+  let str = prompt()
+  // 每超出500克
+  let exceeds = Math.ceil((weight - 1000) / 500);
+
+  if (str == "y") {
+    if (weight <= 1000) {
+      price = 8 + 5
+    } else {
+      price = 8 + exceeds * 4 + 5
+    }
+  } else {
+    if (weight <= 1000) {
+      price = 8
+    } else {
+      price = 8 + exceeds * 4
+    }
+  }
+  console.log(price)
+</script>
+
+<script type="norun" id="ch0104/15">
+  let a = Number(prompt())
+  let b = Number(prompt())
+  let c = Number(prompt())
+
+  if (a >= b && a >= c) {
+    console.log(a)
+  }
+
+  if (b >= a && b >= c) {
+    console.log(b)
+  }
+
+  if (c >= a && c >= b) {
+    console.log(c)
+  }
+
+</script>
+
+<script type="norun" id="ch0104/16">
+
+  let a = Number(prompt())
+  let b = Number(prompt())
+  let c = Number(prompt())
+
+  if (a + b > c && b + c > a && a + c > b) {
+    console.log("yes")
+  } else {
+    console.log("no")
+  }
+</script>
+
+<script type="norun" id="ch0104/17">
+  let years = Number(prompt())
+
+  if (years % 400 == 0 || years % 4 == 0 && years % 100 !== 0) {
+    console.log("yes")
+  } else {
+    console.log("no")
+  }
+</script>
+
+<script type="norun" id="ch0104/18">
+  let x = Number(prompt())
+  let y = Number(prompt())
+
+  if (x >= -1 && x <= 1 && y >= -1 && y <= 1) {
+    console.log("yes")
+  } else {
+    console.log("no")
+  }
+</script>
+
+<script type="norun" id="ch0104/19">
+  let x = Number(prompt())
+  let y = Number(prompt())
+  let str = prompt()
+
+  if (x == 0 || y == 0) {
+    console.log("Divided by zero!")
+  }
+
+  if (str == "+") {
+    result = x + y
+  } else if (str == "*") {
+    result = x * y
+  } else if (str == "-") {
+    result = x - y
+  } else if (str == "/") {
+    result = x / y
+  } else {
+    console.log("Invalid operator!")
+  }
+
+  console.log(result)
+</script>
+
+<script xtype="norun" id="ch0104/20">
+
+</script>
+
+<script type="norun" id="ch0104/21">
+  let a = Number(prompt())
+  let b = Number(prompt())
+
+  let result = Math.pow(a, b)
+  console.log(result)
+</script>
+
+</html>
