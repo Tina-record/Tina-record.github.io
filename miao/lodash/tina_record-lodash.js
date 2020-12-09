@@ -1,4 +1,4 @@
-var tina_record_lodash = (function () {
+var tina_record = (function () {
   function compact(ary) {
     let result = [];
     for (let i = 0; i < ary.length; i++) {
