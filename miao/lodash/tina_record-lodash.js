@@ -86,6 +86,41 @@ var tina_record = (function () {
     return result;
   }
 
+  function chunk(array, size = 1) {
+    let result = [];
+    let lineNum =
+      array.length % size === 0
+        ? array.length / size
+        : Math.floor(array.length / size + 1);
+    for (let i = 0; i < lineNum; i++) {
+      let temp = array.slice(i * size, i * size + size);
+      result.push(temp);
+    }
+    return result;
+  }
+
+  function drop(array, n = 1) {
+    return array.slice(n);
+  }
+
+  function dropRight(array, n = 1) {
+    let result = [];
+    for (let i = 0; i < array.length - n; i++) {
+      result.push(array[i]);
+    }
+    return result;
+  }
+
+  function fill(array, value, start = 0, end = array.length) {
+    if (array.length == 0) {
+      return array;
+    }
+    for (let i = start; i < end; i++) {
+      array[i] = value;
+    }
+    return array;
+  }
+
   return {
     compact,
     add,
@@ -97,5 +132,9 @@ var tina_record = (function () {
     identity,
     map,
     groupBy,
+    chunk,
+    drop,
+    dropRight,
+    fill,
   };
 })();
